@@ -39,30 +39,32 @@ export default function TennisGameComponent() {
   };
 
   return (
-    <div style={{ maxWidth: 500, margin: '2rem auto', padding: 24, border: '1px solid #ccc', borderRadius: 8 }}>
-      <h2>Tennis Kata Testeur</h2>
-      <div style={{ marginBottom: 16 }}>
-        <button onClick={() => handleAdd('A')}>A</button>
-        <button onClick={() => handleAdd('B')} style={{ marginLeft: 8 }}>B</button>
-        <button onClick={handleReset} style={{ marginLeft: 16 }}>Reset</button>
-      </div>
-      <div>Séquence : <b>{sequence || '-'}</b></div>
-      <button onClick={handleSend} disabled={!sequence || loading} style={{ marginTop: 16 }}>
-        {loading ? 'Envoi...' : 'Send'}
-      </button>
-      {error && <div style={{ color: 'red', marginTop: 12 }}>{error}</div>}
-      {result.length > 0 && (
-        <div style={{ marginTop: 24 }}>
-          <h4>Résultat :</h4>
-          <pre style={{ background: '#f7f7f7', padding: 12 }}>
-            {result.map((line, idx) => (
-              <div key={idx}>{line}</div>
-            ))}
-          </pre>
+    <div className="container my-5">
+      <div className="card shadow-sm p-4 mx-auto" style={{maxWidth: 500}}>
+        <h2 className="mb-4 text-center">Tennis Kata Testeur</h2>
+        <div className="mb-3 d-flex gap-2 justify-content-center">
+          <button className="btn btn-primary" onClick={() => handleAdd('A')}>A</button>
+          <button className="btn btn-success" onClick={() => handleAdd('B')}>B</button>
+          <button className="btn btn-outline-secondary" onClick={handleReset}>Reset</button>
         </div>
-      )}
-      {/* Affichage debug de la réponse brute */}
-      {/* <pre>{JSON.stringify(result, null, 2)}</pre> */}
+        <div className="mb-3 text-center">Séquence : <b>{sequence || '-'}</b></div>
+        <div className="d-grid mb-2">
+          <button className="btn btn-dark" onClick={handleSend} disabled={!sequence || loading}>
+            {loading ? 'Envoi...' : 'Envoyer'}
+          </button>
+        </div>
+        {error && <div className="alert alert-danger mt-2">{error}</div>}
+        {result.length > 0 && (
+          <div className="mt-4">
+            <h4>Résultat :</h4>
+            <ul className="list-group">
+              {result.map((line, idx) => (
+                <li className="list-group-item" key={idx}>{line}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
