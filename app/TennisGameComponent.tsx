@@ -1,8 +1,15 @@
+/**
+ * Composant interactif pour tester des séquences de points de tennis.
+ * Permet de saisir une séquence, l'envoyer au backend et d'afficher le résultat.
+ * Utilise Bootstrap pour le style.
+ * @module app/TennisGameComponent
+ */
+
 "use client";
 
 import React, { useState } from 'react';
 
-const API_URL = 'http://localhost:8080/api/tennis/score'; // À adapter selon votre backend
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080/api/tennis/score'; // À adapter selon votre backend
 
 export default function TennisGameComponent() {
   const [sequence, setSequence] = useState<string>('');

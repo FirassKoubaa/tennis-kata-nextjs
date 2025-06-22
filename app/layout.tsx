@@ -1,3 +1,9 @@
+/**
+ * Point d'entrée principal de l'application Next.js Tennis Kata Front.
+ * Définit la structure HTML globale, les polices et les métadonnées du site.
+ * @module app/layout
+ */
+
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -20,4 +26,3 @@ export default function RootLayout({
     </html>
   );
 }
-
