@@ -61,6 +61,3 @@ npm run test
 - Le CORS doit être activé côté backend (voir la classe `CorsConfig` dans le projet Spring Boot).
 
 ---
-
-Pour toute question, reportez-vous à la documentation du backend ou contactez l'auteur du projet.
-
