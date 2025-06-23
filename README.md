@@ -2,6 +2,8 @@
 
 Ce projet est une application Next.js (React) qui permet de tester des séquences de points pour un jeu de tennis, en interagissant avec le backend Spring Boot du projet tennis-kata.
 
+![Screenshot](app/assets/homeview.png)
+
 ## Prérequis
 - Node.js >= 18
 - npm >= 9
@@ -33,6 +35,11 @@ L'application sera accessible sur http://localhost:3000
    npm run start
    ```
 
+## Test unitaires
+```bash
+npm run test
+```
+![Screenshot](app/assets/tests.png)
 ## Utilisation
 
 - Deux boutons "A" et "B" permettent de saisir une séquence de points.
