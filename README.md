@@ -35,6 +35,34 @@ L'application sera accessible sur http://localhost:3000
    npm run start
    ```
 
+## Builder l'application
+
+Pour générer le build de l'application Next.js en production :
+
+```bash
+npm run build
+```
+
+## Utilisation de Docker
+
+### Builder l'image Docker
+
+Pour construire l'image Docker de l'application :
+
+```terminal:
+docker-compose build
+```
+
+### Lancer le container avec Docker Compose
+
+Pour démarrer l'application dans un container Docker :
+
+```terminal
+docker-compose up
+```
+
+L'application sera alors accessible sur http://localhost:3000
+
 ## Test unitaires
 ```bash
 npm run test
